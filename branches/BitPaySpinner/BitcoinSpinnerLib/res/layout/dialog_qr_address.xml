@@ -1,0 +1,43 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scrollView1"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignLeft="@+id/btn_copy_to_clip"
+    android:layout_alignTop="@+id/tv_title_text" >
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="3dp" >
+
+        <TextView
+            android:id="@+id/tv_title_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="0dp"
+            android:text=""
+            android:textColor="@color/White"
+            android:textSize="25dp" />
+
+        <ImageView
+            android:id="@+id/iv_qr_Address"
+            style="@style/QRAddressStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_title_text"
+            android:layout_centerHorizontal="true"
+            android:padding="2dp" />
+
+        <Button
+            android:id="@+id/btn_copy_to_clip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/iv_qr_Address"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="1dp"
+            android:text="@string/copy_to_clipboard" />
+    </RelativeLayout>
+
+</ScrollView>

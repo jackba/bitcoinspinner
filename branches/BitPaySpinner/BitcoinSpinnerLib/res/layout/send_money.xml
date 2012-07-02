@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/BitCoinActivity"
+    android:layout_width="wrap_content"
+    android:layout_height="fill_parent" >
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:paddingTop="5dp" >
+
+        <include
+            android:id="@+id/payToAddress_ref"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="1dp"
+            android:layout_marginRight="1dp"
+            android:layout_marginTop="3dp"
+            layout="@layout/paytoaddress" />
+
+        <include
+            android:id="@+id/spend_ref"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/payToAddress_ref"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="8dp"
+            layout="@layout/spend" />
+
+        <include
+            android:id="@+id/fee_ref"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/spend_ref"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="8dp"
+            layout="@layout/fee" />
+
+        <LinearLayout
+            android:id="@+id/sendAndCancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/fee_ref"
+            android:layout_marginLeft="0dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="5dp" >
+
+            <Button
+                android:id="@+id/btn_spend"
+                style="@style/SendMoneyButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:enabled="false"
+                android:text="@string/send_bitcoins" />
+
+            <Button
+                android:id="@+id/btn_spend_cancel"
+                style="@style/SendMoneyButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/btn_spend"
+                android:layout_alignBottom="@+id/btn_spend"
+                android:layout_toRightOf="@+id/btn_spend"
+                android:text="@string/cancel" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</ScrollView>
